@@ -27,9 +27,10 @@ print(fixedlengthList_3);
 
 final fixedlengthList_4 = List<int>.filled(6, 8);
 print(fixedlengthList_4);
+fixedlengthList_4[0] = 100; // element value can be changed before using .setAll 
 fixedlengthList_4.setAll(0, [1, 2, 3, 4, 5, 6]);
 print(fixedlengthList_4);
-fixedlengthList_4[2] = 100; // element value at the index 2 isn't changed to 100
+fixedlengthList_4[2] = 200; //here elements value at index 2 doesn't change as we are declaring the value after .setAll
 print(fixedlengthList_4.length);
 
 }

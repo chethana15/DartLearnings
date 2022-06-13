@@ -38,6 +38,9 @@ print(growableList);
 growableList.insert(3, 'satrun');
 print(growableList);
   
+final reverse = growableList.reversed;
+print(reverse.toList());
+
 growableList.shuffle();
 print(growableList);  
 }

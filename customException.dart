@@ -6,7 +6,7 @@ void main(){
 print("Enter salary:");
 int? salary = int.parse(stdin.readLineSync()!);
 try{
-int? result = yourSalary(salary);
+int? result = int.parse(yourSalary(salary));
 print(result);
 } on SatisfyBankTermsError catch (e){
   print(e.errorMessage());
@@ -24,7 +24,7 @@ class SatisfyBankTermsError implements Exception {
 
   yourSalary(int n){
   if(n > 10000){
-    print("You are eligible for loan");
+    return "You are eligible for loan";
     // throw new SatisfyBankTermsError();
   }
   else{
